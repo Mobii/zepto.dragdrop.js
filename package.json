@@ -1,0 +1,30 @@
+{
+  "name": "zepto.dragdrop.js",
+  "version": "0.1.2",
+  "description": "[![build status](https://secure.travis-ci.org/ququplay/zepto.dragdrop.js.png)](http://travis-ci.org/ququplay/zepto.dragdrop.js) # zepto.dragdrop.js",
+  "main": "Gruntfile.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ququplay/zepto.dragdrop.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ququplay/zepto.dragdrop.js/issues"
+  },
+  "homepage": "https://github.com/ququplay/zepto.dragdrop.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jslint": "^1.1.12",
+    "grunt-min": "^0.1.0"
+  }
+}

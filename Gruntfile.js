@@ -10,14 +10,14 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         src: src,
-        dest: 'zepto.dragdrop.js'
+        dest: 'dist/zepto.dragdrop.js'
       }
     },
 
     min: {
       dist: {
         src: src,
-        dest: 'zepto.dragdrop.min.js'
+        dest: 'dist/zepto.dragdrop.min.js'
       }
     },
 
@@ -44,5 +44,10 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', 'lint concat min');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-min');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jslint');
+
+  grunt.registerTask('default', 'lint', 'concat', 'min');
 }

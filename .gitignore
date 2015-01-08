@@ -31,4 +31,4 @@ node_modules
 npm-debug.log
 
 # Bower
-boser_components
+bower_components

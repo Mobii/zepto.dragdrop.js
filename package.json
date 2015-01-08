@@ -22,9 +22,15 @@
   "homepage": "https://github.com/ququplay/zepto.dragdrop.js",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.9.0",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jslint": "^1.1.12",
-    "grunt-min": "^0.1.0"
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-jslint": "^1.1.12"
+  },
+  "dependencies": {
+    "grunt-karma": "^0.9.0",
+    "karma": "^0.12.31"
   }
 }

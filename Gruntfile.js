@@ -7,6 +7,8 @@ module.exports = function (grunt) {
     "src/utils.js"];
 
   grunt.initConfig({
+    clean:['dist'],
+
     concat: {
       dist: {
         src: src,
@@ -14,10 +16,11 @@ module.exports = function (grunt) {
       }
     },
 
-    min: {
+    uglify: {
       dist: {
-        src: src,
-        dest: 'dist/zepto.dragdrop.min.js'
+        files: {
+          'dist/zepto.dragdrop.min.js': ['dist/zepto.dragdrop.js']
+        }
       }
     },
 
@@ -39,15 +42,38 @@ module.exports = function (grunt) {
       }
     },
 
-    lint: {
-      files: ['src/*.js']
+    jslint: {
+      src: ['src/*.js']
+    },
+
+    connect: {
+      examples: {
+        options: {
+          port: 9000,
+          base: 'examples'
+        }
+      }
+    },
+
+    karma: {
+      options: {
+        configFile: 'karma.conf.js',
+        runnerPort: 9999,
+        browsers: ['Chrome'],
+        autoWatch: true
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-min');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jslint');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', 'lint', 'concat', 'min');
+  grunt.registerTask('default', ['clean', 'jslint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['default', 'karma']);
+  grunt.registerTask('serve', ['default', 'connect:examples']);
 }

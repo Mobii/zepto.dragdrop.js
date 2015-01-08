@@ -1,88 +1,118 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   '--save-dev',
-1 verbose cli   'grunt-contrib-jslint' ]
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.33
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'grunt-contrib-jslint', null ]
-6 verbose cache add name=undefined spec="grunt-contrib-jslint" args=["grunt-contrib-jslint",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'grunt-contrib-jslint',
-7 verbose parsed url   path: 'grunt-contrib-jslint',
-7 verbose parsed url   href: 'grunt-contrib-jslint' }
-8 silly lockFile 8ce01933-grunt-contrib-jslint grunt-contrib-jslint
-9 verbose lock grunt-contrib-jslint /Users/octavioturra/.npm/8ce01933-grunt-contrib-jslint.lock
-10 silly lockFile 8ce01933-grunt-contrib-jslint grunt-contrib-jslint
-11 silly lockFile 8ce01933-grunt-contrib-jslint grunt-contrib-jslint
-12 verbose addNamed [ 'grunt-contrib-jslint', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile 99e26da3-grunt-contrib-jslint grunt-contrib-jslint@
-15 verbose lock grunt-contrib-jslint@ /Users/octavioturra/.npm/99e26da3-grunt-contrib-jslint.lock
-16 silly addNameRange { name: 'grunt-contrib-jslint', range: '*', hasData: false }
-17 verbose request where is /grunt-contrib-jslint
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 4ccf6a8e1732895f
-20 verbose url raw /grunt-contrib-jslint
-21 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jslint' ]
-22 verbose url resolved https://registry.npmjs.org/grunt-contrib-jslint
-23 verbose request where is https://registry.npmjs.org/grunt-contrib-jslint
-24 info trying registry request attempt 1 at 18:39:27
-25 http GET https://registry.npmjs.org/grunt-contrib-jslint
-26 http 404 https://registry.npmjs.org/grunt-contrib-jslint
-27 verbose headers { date: 'Thu, 08 Jan 2015 20:39:28 GMT',
-27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 verbose headers   'content-type': 'application/json',
-27 verbose headers   'cache-control': 'max-age=0',
-27 verbose headers   'content-length': '52',
-27 verbose headers   'accept-ranges': 'bytes',
-27 verbose headers   via: '1.1 varnish',
-27 verbose headers   age: '0',
-27 verbose headers   'x-served-by': 'cache-jfk1021-JFK',
-27 verbose headers   'x-cache': 'MISS',
-27 verbose headers   'x-cache-hits': '0',
-27 verbose headers   'x-timer': 'S1420749568.616490,VS0,VE80',
-27 verbose headers   'keep-alive': 'timeout=10, max=50',
-27 verbose headers   connection: 'Keep-Alive' }
-28 silly registry.get cb [ 404,
-28 silly registry.get   { date: 'Thu, 08 Jan 2015 20:39:28 GMT',
-28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-28 silly registry.get     'content-type': 'application/json',
-28 silly registry.get     'cache-control': 'max-age=0',
-28 silly registry.get     'content-length': '52',
-28 silly registry.get     'accept-ranges': 'bytes',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-jfk1021-JFK',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1420749568.616490,VS0,VE80',
-28 silly registry.get     'keep-alive': 'timeout=10, max=50',
-28 silly registry.get     connection: 'Keep-Alive' } ]
-29 silly lockFile 99e26da3-grunt-contrib-jslint grunt-contrib-jslint@
-30 silly lockFile 99e26da3-grunt-contrib-jslint grunt-contrib-jslint@
-31 error 404 404 Not Found: grunt-contrib-jslint
-31 error 404
-31 error 404 'grunt-contrib-jslint' is not in the npm registry.
-31 error 404 You should bug the author to publish it
-31 error 404 It was specified as a dependency of 'zepto.dragdrop.js'
-31 error 404
-31 error 404 Note that you can also install from a
-31 error 404 tarball, folder, or http url, or git url.
-32 error System Darwin 14.0.0
-33 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "grunt-contrib-jslint"
-34 error cwd /Users/octavioturra/Development/zepto.dragdrop.js
-35 error node -v v0.10.33
-36 error npm -v 1.4.28
-37 error code E404
-38 verbose exit [ 1, true ]
+3 info using node@v0.10.35
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'D:\\Desenvolvimento\\zepto.dragdrop.js',
+6 verbose install   [ 'grunt-karma',
+6 verbose install     'karma',
+6 verbose install     'grunt',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-jslint' ] ]
+7 info preinstall zepto.dragdrop.js@0.1.2
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-karma@^0.9.0 D:\Desenvolvimento\zepto.dragdrop.js
+10 verbose already installed skipping karma@^0.12.31 D:\Desenvolvimento\zepto.dragdrop.js
+11 verbose already installed skipping grunt@^0.4.5 D:\Desenvolvimento\zepto.dragdrop.js
+12 verbose already installed skipping grunt-contrib-clean@^0.6.0 D:\Desenvolvimento\zepto.dragdrop.js
+13 verbose already installed skipping grunt-contrib-concat@^0.5.0 D:\Desenvolvimento\zepto.dragdrop.js
+14 verbose already installed skipping grunt-contrib-connect@^0.9.0 D:\Desenvolvimento\zepto.dragdrop.js
+15 verbose already installed skipping grunt-contrib-jshint@^0.10.0 D:\Desenvolvimento\zepto.dragdrop.js
+16 verbose already installed skipping grunt-contrib-uglify@^0.7.0 D:\Desenvolvimento\zepto.dragdrop.js
+17 verbose cache add [ 'grunt-contrib-jslint@^1.1.12', null ]
+18 verbose cache add name=undefined spec="grunt-contrib-jslint@^1.1.12" args=["grunt-contrib-jslint@^1.1.12",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'grunt-contrib-jslint@^1.1.12',
+19 verbose parsed url   path: 'grunt-contrib-jslint@^1.1.12',
+19 verbose parsed url   href: 'grunt-contrib-jslint@^1.1.12' }
+20 verbose cache add name="grunt-contrib-jslint" spec="^1.1.12" args=["grunt-contrib-jslint","^1.1.12"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: '^1.1.12',
+21 verbose parsed url   path: '^1.1.12',
+21 verbose parsed url   href: '^1.1.12' }
+22 verbose addNamed [ 'grunt-contrib-jslint', '^1.1.12' ]
+23 verbose addNamed [ null, '>=1.1.12-0 <2.0.0-0' ]
+24 silly lockFile 6ee40501-grunt-contrib-jslint-1-1-12 grunt-contrib-jslint@^1.1.12
+25 verbose lock grunt-contrib-jslint@^1.1.12 C:\Users\Octávio\AppData\Roaming\npm-cache\6ee40501-grunt-contrib-jslint-1-1-12.lock
+26 silly addNameRange { name: 'grunt-contrib-jslint',
+26 silly addNameRange   range: '>=1.1.12-0 <2.0.0-0',
+26 silly addNameRange   hasData: false }
+27 verbose request where is /grunt-contrib-jslint
+28 verbose request registry https://registry.npmjs.org/
+29 verbose request id b5008fb6781a277c
+30 verbose url raw /grunt-contrib-jslint
+31 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jslint' ]
+32 verbose url resolved https://registry.npmjs.org/grunt-contrib-jslint
+33 verbose request where is https://registry.npmjs.org/grunt-contrib-jslint
+34 info trying registry request attempt 1 at 20:59:09
+35 http GET https://registry.npmjs.org/grunt-contrib-jslint
+36 http 404 https://registry.npmjs.org/grunt-contrib-jslint
+37 verbose headers { date: 'Thu, 08 Jan 2015 22:58:58 GMT',
+37 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=0',
+37 verbose headers   'content-length': '52',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   age: '0',
+37 verbose headers   'x-served-by': 'cache-iad2123-IAD',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1420757938.725024,VS0,VE86',
+37 verbose headers   'keep-alive': 'timeout=10, max=50',
+37 verbose headers   connection: 'Keep-Alive' }
+38 silly registry.get cb [ 404,
+38 silly registry.get   { date: 'Thu, 08 Jan 2015 22:58:58 GMT',
+38 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 silly registry.get     'content-type': 'application/json',
+38 silly registry.get     'cache-control': 'max-age=0',
+38 silly registry.get     'content-length': '52',
+38 silly registry.get     'accept-ranges': 'bytes',
+38 silly registry.get     via: '1.1 varnish',
+38 silly registry.get     age: '0',
+38 silly registry.get     'x-served-by': 'cache-iad2123-IAD',
+38 silly registry.get     'x-cache': 'MISS',
+38 silly registry.get     'x-cache-hits': '0',
+38 silly registry.get     'x-timer': 'S1420757938.725024,VS0,VE86',
+38 silly registry.get     'keep-alive': 'timeout=10, max=50',
+38 silly registry.get     connection: 'Keep-Alive' } ]
+39 silly lockFile 6ee40501-grunt-contrib-jslint-1-1-12 grunt-contrib-jslint@^1.1.12
+40 silly lockFile 6ee40501-grunt-contrib-jslint-1-1-12 grunt-contrib-jslint@^1.1.12
+41 error 404 404 Not Found: grunt-contrib-jslint
+41 error 404
+41 error 404 'grunt-contrib-jslint' is not in the npm registry.
+41 error 404 You should bug the author to publish it
+41 error 404 It was specified as a dependency of 'zepto.dragdrop.js'
+41 error 404
+41 error 404 Note that you can also install from a
+41 error 404 tarball, folder, or http url, or git url.
+42 error System Windows_NT 6.2.9200
+43 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+44 error cwd D:\Desenvolvimento\zepto.dragdrop.js
+45 error node -v v0.10.35
+46 error npm -v 1.4.28
+47 error code E404
+48 verbose exit [ 1, true ]

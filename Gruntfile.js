@@ -42,10 +42,6 @@ module.exports = function (grunt) {
       }
     },
 
-    jslint: {
-      src: ['src/*.js']
-    },
-
     connect: {
       examples: {
         options: {
@@ -56,12 +52,13 @@ module.exports = function (grunt) {
     },
 
     karma: {
-      options: {
+      unit: {
         configFile: 'karma.conf.js',
         runnerPort: 9999,
         browsers: ['Chrome'],
         autoWatch: true
-      }
+      },
+
     }
   });
 
@@ -69,11 +66,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['clean', 'jslint', 'concat', 'uglify']);
-  grunt.registerTask('test', ['default', 'karma']);
+  grunt.registerTask('default', ['clean', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['default', 'karma:unit']);
   grunt.registerTask('serve', ['default', 'connect:examples']);
 }

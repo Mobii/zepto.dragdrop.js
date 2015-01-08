@@ -12,9 +12,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'bower_components/zepto/zepto.js',
-      'dist/zept.dragdrop.js',
-      'test/libs/**/*.js',
-      'test/**/*.js'
+      'dist/zepto.dragdrop.js',
+      'tests/libs/**/*.js',
+      'tests/**/*.js'
     ],
 
     // list of files / patterns to exclude

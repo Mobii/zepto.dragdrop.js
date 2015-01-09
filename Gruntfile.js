@@ -46,19 +46,28 @@ module.exports = function (grunt) {
       examples: {
         options: {
           port: 9000,
-          base: 'examples'
+          base: ['bower_components', 'dist', 'examples'],
         }
+      }
+    },
+
+    watch:{
+      scripts: {
+        files: ['src/**/*.js'],
+        tasks: ['build'],
+      },
+      test: {
+        files: ['src/**/*.js', 'tests/**/*.js'],
+        tasks: ['build', 'karma:unit']
       }
     },
 
     karma: {
       unit: {
         configFile: 'karma.conf.js',
-        runnerPort: 9999,
         browsers: ['Chrome'],
-        autoWatch: true
-      },
-
+        autowatch: true,
+      }
     }
   });
 
@@ -67,9 +76,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', ['clean', 'jshint', 'concat', 'uglify']);
-  grunt.registerTask('test', ['default', 'karma:unit']);
-  grunt.registerTask('serve', ['default', 'connect:examples']);
+  grunt.registerTask('build', ['clean', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['build', 'karma:unit', 'watch:test']);
+  grunt.registerTask('serve', ['build', 'connect:examples'])
+  grunt.registerTask('default', ['build', 'connect:examples', 'watch:scripts']);
 }

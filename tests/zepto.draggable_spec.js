@@ -3,7 +3,16 @@ describe("Draggable", function() {
   var dragEl;
 
   beforeEach(function () {
-    dragEl = $('<div class="drag"></div>').appendTo('body');
+    Object.defineProperty($, 'touchable',{
+      get: function(){return false;},
+      readonly: true
+    });
+    dragEl = $('<div class="drag"></div>')
+    .css({
+      width: '40px',
+      height: '40px',
+      position: 'absolute'
+    }).appendTo('body');
     dragEl.css({ top: 0, left: 0 });
   });
 
@@ -24,21 +33,21 @@ describe("Draggable", function() {
       var callback = jasmine.createSpy();
       dragEl.draggable({ start: callback });
       dragEl.simdrag({ x: 20, y: 20 }, { x: 500, y: 300 });
-      expect(callback).wasCalledWith(dragEl);
+      expect(callback).toHaveBeenCalledWith(dragEl);
     });
 
     it("should call stop callback", function () {
       var callback = jasmine.createSpy();
       dragEl.draggable({ stop: callback });
       dragEl.simdrag({ x: 20, y: 20 }, { x: 500, y: 300 });
-      expect(callback).wasCalledWith(dragEl);
+      expect(callback).toHaveBeenCalledWith(dragEl);
     });
 
     it("should call drag callback", function () {
       var callback = jasmine.createSpy();
       dragEl.draggable({ drag: callback });
       dragEl.simdrag({ x: 20, y: 20 }, { x: 500, y: 300 });
-      expect(callback).wasCalledWith(dragEl);
+      expect(callback).toHaveBeenCalledWith(dragEl);
     });
   });
 

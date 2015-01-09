@@ -13,6 +13,7 @@
   var draggable; // current draggable
 
   function Draggable(el, opts) {
+    console.log($.touchable)
     var eventName = ($.touchable) ? "touchstart" : "mousedown";
     var o = el.offset();
 
@@ -252,7 +253,7 @@
 // The following code is heavily inspired by jQuery's $.fn.data()
 
 ;(function($) {
-  var data = {}, dataAttr = $.fn.data, camelize = $.zepto.camelize,
+  var data = {}, dataAttr = $.fn.data, camelize = $.camelCase,
     exp = $.expando = 'Zepto' + (+new Date())
 
   // Get value from node:

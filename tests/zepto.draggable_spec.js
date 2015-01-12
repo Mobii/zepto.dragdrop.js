@@ -11,9 +11,10 @@ describe("Draggable", function() {
     .css({
       width: '40px',
       height: '40px',
-      position: 'absolute'
+      position: 'absolute',
+      top: 0,
+      left: 0
     }).appendTo('body');
-    dragEl.css({ top: 0, left: 0 });
   });
 
   afterEach(function () {

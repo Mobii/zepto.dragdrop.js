@@ -13,7 +13,6 @@
   var draggable; // current draggable
 
   function Draggable(el, opts) {
-    console.log($.touchable)
     var eventName = ($.touchable) ? "touchstart" : "mousedown";
     var o = el.offset();
 

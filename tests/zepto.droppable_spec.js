@@ -3,6 +3,29 @@ describe("Droppable", function() {
   var dragEl, dropEl;
 
   beforeEach(function () {
+    $('<style></style>').html('\
+    .drag {\
+      width: 40px;\
+      height: 40px;\
+      background-color: #ff0000;\
+      line-height: 40px;\
+      text-align: center;\
+      position: absolute;\
+      z-index: 2;\
+    }\
+    .drop {\
+      width: 300px;\
+      height: 300px;\
+      line-height: 40px;\
+      text-align: center;\
+      position: absolute;\
+      background: #00ff00;\
+      border: 1px solid #ff0000;\
+      left: 500px;\
+      top: 500px;\
+      z-index: 1;\
+    }\
+    ').appendTo('head');
     dragEl = $('<div class="drag"></div>').appendTo('body');
     dropEl = $('<div class="drop"></div>').appendTo('body');
 

@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'zeparser' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'zeparser', null ]
+6 verbose cache add name=undefined spec="zeparser" args=["zeparser",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'zeparser',
+7 verbose parsed url   path: 'zeparser',
+7 verbose parsed url   href: 'zeparser' }
+8 silly lockFile 59f88c56-zeparser zeparser
+9 verbose lock zeparser /Users/octavioturra/.npm/59f88c56-zeparser.lock
+10 silly lockFile 59f88c56-zeparser zeparser
+11 silly lockFile 59f88c56-zeparser zeparser
+12 verbose addNamed [ 'zeparser', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile d69d2929-zeparser zeparser@
+15 verbose lock zeparser@ /Users/octavioturra/.npm/d69d2929-zeparser.lock
+16 silly addNameRange { name: 'zeparser', range: '*', hasData: false }
+17 verbose request where is /zeparser
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 11bc60f0bc475ed7
+20 verbose url raw /zeparser
+21 verbose url resolving [ 'https://registry.npmjs.org/', './zeparser' ]
+22 verbose url resolved https://registry.npmjs.org/zeparser
+23 verbose request where is https://registry.npmjs.org/zeparser
+24 info trying registry request attempt 1 at 15:43:55
+25 verbose etag "AVHJYD42A87AXG2OJSG92B3T3"
+26 http GET https://registry.npmjs.org/zeparser
+27 http 304 https://registry.npmjs.org/zeparser
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Mon, 12 Jan 2015 17:43:56 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Mon, 12 Jan 2015 17:40:02 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"AVHJYD42A87AXG2OJSG92B3T3"',
+28 silly registry.get     age: '43',
+28 silly registry.get     'x-served-by': 'cache-jfk1033-JFK',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '20',
+28 silly registry.get     'x-timer': 'S1421084636.626237,VS0,VE0',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 verbose etag https://registry.npmjs.org/zeparser from cache
+30 silly addNameRange number 2 { name: 'zeparser', range: '*', hasData: true }
+31 silly addNameRange versions [ 'zeparser',
+31 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5', '0.0.7' ] ]
+32 verbose addNamed [ 'zeparser', '0.0.7' ]
+33 verbose addNamed [ '0.0.7', '0.0.7' ]
+34 silly lockFile 75309aaa-zeparser-0-0-7 zeparser@0.0.7
+35 verbose lock zeparser@0.0.7 /Users/octavioturra/.npm/75309aaa-zeparser-0-0-7.lock
+36 silly lockFile bfb395e3--org-zeparser-zeparser-0-0-7-tgz https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+37 verbose lock https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz /Users/octavioturra/.npm/bfb395e3--org-zeparser-zeparser-0-0-7-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz',
+38 verbose addRemoteTarball   'b880b605cbf16d780613649342fc774a145cdf30' ]
+39 info retry fetch attempt 1 at 15:43:57
+40 verbose fetch to= /var/folders/cy/zqy2m3ms0nx5vsqnskx6btlr0000gp/T/npm-38895-r1DhkchI/registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+41 http GET https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+42 http 200 https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+43 silly lockFile bfb395e3--org-zeparser-zeparser-0-0-7-tgz https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+44 silly lockFile bfb395e3--org-zeparser-zeparser-0-0-7-tgz https://registry.npmjs.org/zeparser/-/zeparser-0.0.7.tgz
+45 silly lockFile 75309aaa-zeparser-0-0-7 zeparser@0.0.7
+46 silly lockFile 75309aaa-zeparser-0-0-7 zeparser@0.0.7
+47 silly lockFile d69d2929-zeparser zeparser@
+48 silly lockFile d69d2929-zeparser zeparser@
+49 error Error: EACCES, mkdir '/Users/octavioturra/.npm/zeparser/0.0.7'
+49 error  { [Error: EACCES, mkdir '/Users/octavioturra/.npm/zeparser/0.0.7']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/Users/octavioturra/.npm/zeparser/0.0.7',
+49 error   parent: 'zepto.dragdrop.js' }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 14.0.0
+52 error command "node" "/usr/local/bin/npm" "install" "zeparser"
+53 error cwd /Users/octavioturra/Development/zepto.dragdrop.js.octavio
+54 error node -v v0.10.33
+55 error npm -v 1.4.28
+56 error path /Users/octavioturra/.npm/zeparser/0.0.7
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, mkdir '/Users/octavioturra/.npm/zeparser/0.0.7'
+60 verbose exit [ 3, true ]

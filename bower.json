@@ -1,0 +1,20 @@
+{
+  "name": "ZeptoDragDrop",
+  "main": "dist/zepto.dragdrop.js",
+  "version": "0.1.2",
+  "homepage": "https://github.com/ququplay/zepto.dragdrop.js",
+  "authors": [
+    "ququplay"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.6"
+  }
+}

@@ -17,10 +17,11 @@
       text-align: center;
     }
   </style>
-  <script src="../tests/libs/zepto.js"></script>
+  <script src="../zepto/zepto.js"></script>
   <script src="../zepto.dragdrop.js"></script>
   <script>
     $(function () {
+      $.touchable = false;
       $('#drag').draggable();
     });
   </script>

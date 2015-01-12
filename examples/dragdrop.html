@@ -31,10 +31,11 @@
     }
 
   </style>
-  <script src="../tests/libs/zepto.js"></script>
+  <script src="../zepto/zepto.js"></script>
   <script src="../zepto.dragdrop.js"></script>
   <script>
     $(function () {
+      $.touchable = false;
       $('#drag').draggable({
         start: function () {
           this.css('-webkit-transform', 'scale(2)');

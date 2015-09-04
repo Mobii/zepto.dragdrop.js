@@ -47,19 +47,22 @@
 
   // helpers
   function dropOrRevert(e) {
-    var droppable, pos;
-    var dragEl = e.el;
+      var droppable, pos;
+      var dragEl = e.el;
 
-    if (dragEl) {
-      pos = $.getPos(e);
-      droppable = findDroppable(e, pos);
-      if (droppable) {
-        droppable.drop(e, pos);
+      if (dragEl) {
+        dragEl.css({ display: 'none' });
+        setTimeout(function(){
+          pos = $.getPos(e);
+          droppable = findDroppable(e, pos);
+          if (droppable) {
+            droppable.drop(e, pos);
+          }
+          else if (dragEl.data('revert')){
+            Droppable.prototype.revert(dragEl);
+          }
+        },1);
       }
-      else if (dragEl.data('revert')){
-        Droppable.prototype.revert(dragEl);
-      }
-    }
 
     e.preventDefault();
     e.stopPropagation();
@@ -69,7 +72,6 @@
     var droppable, dropEl;
     var dragEl = e.el;
 
-    dragEl.css({ display: 'none' });
     dropEl = $.elementFromPoint(pos.x, pos.y);
     dragEl.css({ display: 'block' });
     return $(dropEl).data('droppable');
